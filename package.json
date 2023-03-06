@@ -1,6 +1,6 @@
 {
-  "name": "@plantquest/assetmap",
-  "version": "1.4.1",
+  "name": "@plantquest/assetmap-react",
+  "version": "1.0.0",
   "description": "PlantQuest Asset Map",
   "author": "plantquest",
   "license": "MIT",
