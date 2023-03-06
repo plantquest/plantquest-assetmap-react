@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles.module.css'
 
-import './pqam.js'
+import '@plantquest/assetmap'
 
 
 class PlantQuestAssetMap extends React.Component {
