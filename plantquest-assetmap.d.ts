@@ -1,1 +1,1 @@
-declare module '@plantquest/assetmap'
+declare module '@plantquest/assetmap-react'
