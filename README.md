@@ -39,7 +39,7 @@ Set `window.PLANTQUEST_ASSETMAP_LOG` to `true` to enable logging.
 
 ```js
 
-import { PlantQuestAssetMap } from '@plantquest/assetmap'
+import { PlantQuestAssetMap } from '@plantquest/assetmap-react'
 
 // enable logging - useful for debugging purposes
 window.PLANTQUEST_ASSETMAP_LOG = true
