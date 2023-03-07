@@ -4,7 +4,7 @@
   "description": "PlantQuest Asset Map",
   "author": "plantquest",
   "license": "MIT",
-  "repository": "plantquest/plantquest-assetmap",
+  "repository": "plantquest/plantquest-assetmap-react",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
@@ -30,7 +30,7 @@
     "repo-publish-quick": "npm run build && npm run test:unit && npm run repo-tag && npm publish --access public --registry https://registry.npmjs.org "
   },
   "devDependencies": {
-    "babel-eslint": "10.0.3",
+    "babel-eslint": "10.1.0",
     "cross-env": "7.0.2",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "6.7.0",
@@ -57,6 +57,6 @@
     "*.ts"
   ],
   "dependencies": {
-    "@plantquest/assetmap": "^1.4.1"
+    "@plantquest/assetmap": "1.5.0"
   }
 }
