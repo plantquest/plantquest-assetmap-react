@@ -243,6 +243,7 @@ class App extends React.Component {
   focus: &lt;Boolean&gt;,   
 }</pre>
   <p>Where:<br>
+    <span>This is used to display information regarding a particular room on the asset map. When a room is selected on the map, the asset map will focus on the room.</span><br>
     <i>&lt;ROOM-ID&gt;</i>: Room Identifier String<br>
     <i>&lt;Boolean&gt;</i>: either true or false - enable focus when a room is shown<br>
   </p>
@@ -256,6 +257,7 @@ class App extends React.Component {
   asset: &lt;ASSET-ID&gt;,     
 }</pre>
   <p>Where:<br>
+  <span>This calls the PlantQuest asset map via an API endpoint and displays a particular asset location and asset ID on the map.</span><br>
     <i>&lt;ASSET-ID&gt;</i>: Asset Identifier String<br>
   </p>
   
@@ -268,6 +270,7 @@ class App extends React.Component {
   asset: &lt;ASSET-ID&gt;,     
 }</pre>
   <p>Where:<br>
+  <span>This calls the PlantQuest asset map via an API endpoint and removes a particular asset from the map.</span><br>
     <i>&lt;ASSET-ID&gt;</i>: Asset Identifier String<br>
   </p>
 
@@ -281,6 +284,7 @@ class App extends React.Component {
   asset: &lt;ASSET-ID&gt;,     
 }</pre>
   <p>Where:<br>
+  <span>This indicates what asset information to show on the asset map, and in what manner to display it.</span><br>
     <i>&lt;STATE&gt;</i>: State String ('up', 'down', 'alarm', 'missing') - states from the <b>options</b> <br>
     <i>&lt;ASSET-ID&gt;</i>: Asset Identifier String<br>
   </p>
@@ -294,6 +298,7 @@ class App extends React.Component {
   map: &lt;INTEGER&gt;,     
 }</pre>
   <p>Where:<br>
+  <span>This indicates what map to show. Maps are numbered 1 to n. For example, "Map 1" may be "First Floor Map", "Map 2" may be "Second Floor Map" etc.</span><br>
     <i>&lt;INTEGER&gt;</i>: Number of the map<br>
   </p>
   
@@ -308,6 +313,7 @@ class App extends React.Component {
   state: &lt;STATE&gt;,
 }</pre>
   <p>Where:<br>
+  <span>Provides an explanation of what the "<STATE>" placeholder stands for, indicating that it should be replaced with the actual state string. In this case, the only available state is 'ready'.</span><br>
     <i>&lt;STATE&gt;</i>: 'ready' - triggered when the map is fully rendered <br>
   </p>
 
@@ -349,6 +355,7 @@ PQAM.listen((msg) => {
   room: &lt;ROOM-ID&gt;,     
 }</pre>
   <p>Where:<br>
+  <span>Relates to when the user selects a room on the map and returns the rooms id and name.</span><br>
     <i>&lt;ROOM-ID&gt;</i>: Room Identifier String<br>
   </p>
 
@@ -362,6 +369,7 @@ PQAM.listen((msg) => {
   level: &lt;STRING&gt;,
 }</pre>
   <p>Where:<br>
+  <span>Relates to the map that user wishes to view and manipulate. Example: User is currently viewing "Map 1 - First Floor" and wishes to view "Map 2 - Second Floor".</span><br>
     <i>&lt;INTEGER&gt;</i>: Number of the map user just selected <br>
     <i>&lt;STRING&gt;</i>: Name of the level of that map <br>
   </p>
@@ -375,6 +383,7 @@ PQAM.listen((msg) => {
   asset: &lt;OBJECT&gt;,
 }</pre>
   <p>Where:<br>
+  <span>Allows the user to view an assets location on the asset map.</span><br>
     <i>&lt;OBJECT&gt;</i>: Metadata of the SHOWN asset <br>
   </p>
 
