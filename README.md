@@ -209,6 +209,8 @@ class App extends React.Component {
 
   <h3>ZOOM</h3>
   <pre>
+  <p>Where:<br>
+  <span>example text</span><br>
 {
   srv: 'plantquest',
   part: 'assetmap',
