@@ -214,7 +214,7 @@ class App extends React.Component {
   zoom: &lt;INTEGER&gt;,     
 }</pre>
   <p>Where:<br>
-    <span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxx xxxx </span>
+    <span>urrent customers report a reduction in emergency response times by up to 75% making the PlantQuest ERT solution an ess</span><br>
     <i>&lt;INTEGER&gt;</i>: Zoom level (default: 2 to 6)<br>
   </p>
 
