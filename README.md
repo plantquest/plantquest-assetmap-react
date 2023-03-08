@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@plantquest/assetmap.svg)](https://www.npmjs.com/package/@plantquest/assetmap)
 
-> PlantQuest Asset Map is xxxxxxx
+>PlantQuest is a supplier of asset mapping solutions to the Life Science sector. The industry focused PlantQuest Asset Map allows users to display asset information on maps of their facility helping them to make smart, quicker and more insightful decisions. In turn, increasing their operational effeciency.
 
 ## Install
 
