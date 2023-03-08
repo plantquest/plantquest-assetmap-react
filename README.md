@@ -215,7 +215,7 @@ class App extends React.Component {
   zoom: &lt;INTEGER&gt;,     
 }</pre>
   <p>Where:<br>
-  <span>When you zoom on a map, the scale of the map changes to showing more or less of your facility map, depending on whether you zoom in or out. The default zoom level value is between 2 and 6, with this value having the ability to be adjusted as needed</span><br>
+  <span>When you zoom on a map, the scale of the map changes to showing more or less of your facility map, depending on whether you zoom in or out. The default zoom level value is between 2 and 6, with this value having the ability to be adjusted as needed.</span><br>
     <i>&lt;INTEGER&gt;</i>: Zoom level (default: 2 to 6)<br>
   </p>
 
@@ -228,7 +228,7 @@ class App extends React.Component {
   relate: 'room-asset',
 }</pre>
 <p>Where:<br>
-  <span>This retrieves information and relationships regarding a room and the assets within it</span><br>
+  <span>This retrieves information and relationships regarding a room and the assets within it.</span><br>
   <p>Listen: <a href="#listen-relation">RELATION</a><br>
   </p>
 
