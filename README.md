@@ -215,6 +215,7 @@ class App extends React.Component {
   zoom: &lt;INTEGER&gt;,     
 }</pre>
   <p>Where:<br>
+    <span>Zoom allows the user to zoom in and out on the map, using ................</span><br>
     <i>&lt;INTEGER&gt;</i>: Zoom level (default: 2 to 6)<br>
   </p>
 
