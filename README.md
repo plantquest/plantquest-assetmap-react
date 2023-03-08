@@ -208,7 +208,7 @@ class App extends React.Component {
 
   <h3>ZOOM</h3>
   <pre>
-{
+{//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   srv: 'plantquest',
   part: 'assetmap',
   zoom: &lt;INTEGER&gt;,     
