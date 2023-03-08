@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@plantquest/assetmap.svg)](https://www.npmjs.com/package/@plantquest/assetmap)
 
-> PlantQuest Asset Map
+> PlantQuest Asset Map is xxxxxxx
 
 ## Install
 
