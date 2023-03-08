@@ -208,12 +208,13 @@ class App extends React.Component {
 
   <h3>ZOOM</h3>
   <pre>
-{//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+{
   srv: 'plantquest',
   part: 'assetmap',
   zoom: &lt;INTEGER&gt;,     
 }</pre>
   <p>Where:<br>
+    <span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxx xxxx </span>
     <i>&lt;INTEGER&gt;</i>: Zoom level (default: 2 to 6)<br>
   </p>
 
