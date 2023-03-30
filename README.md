@@ -44,6 +44,8 @@ import { PlantQuestAssetMap } from '@plantquest/assetmap-react'
 
 // enable logging - useful for debugging purposes
 window.PLANTQUEST_ASSETMAP_LOG = true
+// enable small info box for the current asset info shown - such as xco, yco, etc.
+window.PLANTQUEST_ASSETMAP_DEBUG.show_coords = true
 
 const options = {
   data: 'https://demo.plantquest.app/sample-data.js',
