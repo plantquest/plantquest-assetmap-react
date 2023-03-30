@@ -373,8 +373,32 @@ PQAM.send('srv:plantquest,part:assetmap,list:asset')
   <span>Save a new <code>asset|room|building</code> with your own metadata</span><br>
     <i>&lt;OBJECT&gt;</i>: Metadata of your <code>asset|room|building</code> to be saved
   </p>
-  
-  
+
+```js
+// for example
+const PQAM = window.PlantQuestAssetMap
+    
+PQAM.send({
+  srv: 'plantquest',
+  part: 'assetmap',
+  save: 'asset',
+  asset: {
+    id: 'e565b059-8633-460a-8171-903d38720c26',
+    tag: 'asset001',
+    xco: 10,
+    yco: 10,
+  },
+})
+    
+PQAM.listen((msg) => {
+  if('asset' === msg.save) {
+    // use msg.asset
+    // where msg.asset is the newly saved asset
+  }
+})
+   
+```
+
   <h2>LISTEN MESSAGES</h2>
    
   <h3>STATE</h3>
