@@ -305,7 +305,18 @@ class App extends React.Component {
   <span>This indicates what map to show. Maps are numbered 1 to n. For example, "Map 1" may be "First Floor Map", "Map 2" may be "Second Floor Map" etc.</span><br>
     <i>&lt;INTEGER&gt;</i>: Number of the map<br>
   </p>
-  
+ 
+   <h3>LIST ASSET|ROOM|BUILDING</h3>
+  <pre>
+{
+  srv: 'plantquest',
+  part: 'assetmap',
+  list: 'asset|room|building', 
+}</pre>
+  <p>Where:<br>
+  <span>This indicates what map to show. Maps are numbered 1 to n. For example, "Map 1" may be "First Floor Map", "Map 2" may be "Second Floor Map" etc.</span><br>
+    <i>&lt;INTEGER&gt;</i>: Number of the map<br>
+  </p>
   
   <h2>LISTEN MESSAGES</h2>
    
