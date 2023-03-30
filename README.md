@@ -460,6 +460,19 @@ PQAM.listen((msg) => {
  <i>&lt;OBJECT&gt;</i>: the metadata of the loaded <code>asset|room|building</code> <br>
   </p>
 
+<h3>USER SAVE ASSET|ROOM|BUILDING</h3>
+  <pre>
+{
+  srv: 'plantquest',
+  part: 'assetmap',
+  save: 'asset|room|building',
+  asset|room|building: &lt;OBJECT&gt;,
+}</pre>
+  <p>Where:<br>
+  <span>Allows the user to save a new <code>asset|room|building</code> with their own metadata </span><br>
+ <i>&lt;OBJECT&gt;</i>: the metadata of the saved <code>asset|room|building</code> <br>
+  </p>
+  
 ## Licenses
 
 [MIT](LICENSE) © [Plantquest Ltd](https://plantquest.com)
