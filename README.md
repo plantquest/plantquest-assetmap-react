@@ -313,11 +313,30 @@ class App extends React.Component {
   part: 'assetmap',
   list: 'asset|room|building', 
 }</pre>
-  <p>Where:<br>
-  <span>This indicates what map to show. Maps are numbered 1 to n. For example, "Map 1" may be "First Floor Map", "Map 2" may be "Second Floor Map" etc.</span><br>
-    <i>&lt;INTEGER&gt;</i>: Number of the map<br>
-  </p>
-  
+
+```js
+// for example - take assets
+const PQAM = window.PlantQuestAssetMap
+// our listener
+PQAM.listen((msg) => {
+  if('asset' === msg.list) {
+    // use msg.assets
+    // where msg.assets are the assets listed
+  }
+})
+
+PQAM.send({
+  'srv': 'plantquest',
+  'part': 'assetmap',
+  'list': 'asset'
+})
+
+the syntax is flexiable enough for us to just write:
+
+PQAM.send('srv:plantquest,part:assetmap,list:asset') 
+
+```
+
   <h2>LISTEN MESSAGES</h2>
    
   <h3>STATE</h3>
@@ -402,6 +421,19 @@ PQAM.listen((msg) => {
     <i>&lt;OBJECT&gt;</i>: Metadata of the SHOWN asset <br>
   </p>
 
+  <h3>USER LIST ASSETS/ROOM/BUILDING</h3>
+  <pre>
+{
+  srv: 'plantquest',
+  part: 'assetmap',
+  list: 'asset|room|building',
+  assets: &lt;ARRAY&gt;,
+}</pre>
+  <p>Where:<br>
+  <span>Allows the user to list all the assets there are on the map.</span><br>
+    <i>&lt;ARRAY&gt;</i>: List of all the assets <br>
+  </p>
+  
 ## Licenses
 
 [MIT](LICENSE) © [Plantquest Ltd](https://plantquest.com)
