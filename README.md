@@ -493,11 +493,11 @@ PQAM.listen((msg) => {
   srv: 'plantquest',
   part: 'assetmap',
   list: 'asset|room|building',
-  assets: &lt;ARRAY&gt;,
+  assets|rooms|buildings: &lt;ARRAY&gt;,
 }</pre>
   <p>Where:<br>
-  <span>Allows the user to list all the assets there are on the map.</span><br>
-    <i>&lt;ARRAY&gt;</i>: List of all the assets <br>
+ <span>Allows the user to list all the <code>assets|rooms|buildings</code> there are on the map.</span><br>
+ <i>&lt;ARRAY&gt;</i>: List of all the <code>assets|rooms|buildings</code> <br>
   </p>
 
 <h3>USER LOAD ASSET|ROOM|BUILDING</h3>
