@@ -343,7 +343,7 @@ PQAM.send('srv:plantquest,part:assetmap,list:asset')
   srv: 'plantquest',
   part: 'assetmap',
   load: 'asset|room|building', 
-  id: <STRING>,
+  id: &lt;STRING&gt;,
 }</pre>
  <p>Where:<br>
   <span>Load a single asset|room|building by id</span><br>
