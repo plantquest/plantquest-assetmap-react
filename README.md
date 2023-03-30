@@ -346,8 +346,8 @@ PQAM.send('srv:plantquest,part:assetmap,list:asset')
   id: &lt;STRING&gt;,
 }</pre>
  <p>Where:<br>
-  <span>Load a single asset|room|building by id</span><br>
-    <i>&lt;STRING&gt;</i>: ID of the asset|room|building to be loaded
+  <span>Load a single <pre>asset|room|building</pre> by id</span><br>
+    <i>&lt;STRING&gt;</i>: ID of the <pre>asset|room|building</pre> to be loaded
   </p>
 
   <h2>LISTEN MESSAGES</h2>
