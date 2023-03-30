@@ -361,6 +361,20 @@ PQAM.send('srv:plantquest,part:assetmap,list:asset')
     <i>&lt;STRING&gt;</i>: ID of the <code>asset|room|building</code> to be loaded
   </p>
 
+<h3>SAVE ASSET|ROOM|BUILDING</h3>
+  <pre>
+{
+  srv: 'plantquest',
+  part: 'assetmap',
+  save: 'asset|room|building', 
+  asset|room|building: &lt;OBJECT&gt;,
+}</pre>
+ <p>Where:<br>
+  <span>Save a new <code>asset|room|building</code> with your own metadata</span><br>
+    <i>&lt;OBJECT&gt;</i>: Metadata of your <code>asset|room|building</code> to be saved
+  </p>
+  
+  
   <h2>LISTEN MESSAGES</h2>
    
   <h3>STATE</h3>
