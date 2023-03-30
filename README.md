@@ -421,7 +421,7 @@ PQAM.listen((msg) => {
     <i>&lt;OBJECT&gt;</i>: Metadata of the SHOWN asset <br>
   </p>
 
-  <h3>USER LIST ASSETS/ROOM/BUILDING</h3>
+  <h3>USER LIST ASSETS|ROOM|BUILDING</h3>
   <pre>
 {
   srv: 'plantquest',
