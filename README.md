@@ -458,8 +458,7 @@ PQAM.listen((msg) => {
   <p>Where:<br>
   <span>Allows the user to load a single <code>asset|room|building</code> by id</span><br>
  <i>&lt;OBJECT&gt;</i>: the metadata of the loaded <code>asset|room|building</code> <br>
-  </p> 
-{srv: 'plantquest', part: 'assetmap', load: 'asset', asset: Entity}
+  </p>
 
 ## Licenses
 
