@@ -67,6 +67,17 @@ const options = {
     // "marker" - type of marker ( 'standard' | 'alert' ) 
   },
   
+  endpoint: ENDPOINT,
+
+  // mode can either can 'live' or 'demo'
+  // if you want data to be loaded from the static demo js file (self.data here) - use 'demo' mode
+  // if you want 'live' data from the endpoint - use 'live' mode
+  mode: 'live',
+
+  plant_id: '', // your plant_id
+  project_id: 'm71044', // your project_id
+  stage: 'dev', // your stage
+  
   // room highlight color
   room: {
     color: 'red'
