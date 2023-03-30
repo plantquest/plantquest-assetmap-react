@@ -321,7 +321,7 @@ const PQAM = window.PlantQuestAssetMap
 PQAM.listen((msg) => {
   if('asset' === msg.list) {
     // use msg.assets
-    // where msg.assets are the assets listed
+    // where msg.assets is a list of all assets on the map
   }
 })
 
