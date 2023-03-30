@@ -75,8 +75,8 @@ const options = {
   mode: 'live',
 
   plant_id: '', // your plant_id
-  project_id: 'm71044', // your project_id
-  stage: 'dev', // your stage
+  project_id: '', // your project_id
+  stage: '', // your stage
   
   // room highlight color
   room: {
