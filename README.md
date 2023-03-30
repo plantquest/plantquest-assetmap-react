@@ -331,7 +331,7 @@ PQAM.send({
   'list': 'asset'
 })
 
-the syntax is flexiable enough for us to just write:
+// the syntax is flexiable enough for us to just write:
 
 PQAM.send('srv:plantquest,part:assetmap,list:asset') 
 
