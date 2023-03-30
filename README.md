@@ -519,7 +519,7 @@ PQAM.listen((msg) => {
 }</pre>
   <p>Where:<br>
   <span>Allows the user to save a new <code>asset|room|building</code> with their own metadata </span><br>
- <i>&lt;OBJECT&gt;</i>: the metadata of the saved <code>asset|room|building</code> <br>
+ <i>&lt;OBJECT&gt;</i>: the metadata of the newly saved <code>asset|room|building</code> <br>
   </p>
   
 ## Licenses
