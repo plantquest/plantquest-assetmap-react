@@ -37,7 +37,7 @@ Set `window.PLANTQUEST_ASSETMAP_DEBUG.show_coords` to `true` to display a small 
 * `start.map`: Starting map ( default: `0` )
 * `start.level`: Starting level ( default: `0` )
 * `room.color`: Room highlight color ( default: `'#33f'` )
-* `mode`: MAP MODE can either can 'live' or 'demo'
+* `mode`: MAP MODE can either can `'live'` or `'demo'` - check out the code example below for details
 * `plant_id`: your plant ID
 * `project_id`: your project ID
 * `stage`: your stage
