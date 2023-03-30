@@ -67,7 +67,7 @@ const options = {
     // "marker" - type of marker ( 'standard' | 'alert' ) 
   },
   
-  endpoint: ENDPOINT,
+  endpoint: ENDPOINT, // your endpoint: 'https://*'
 
   // mode can either can 'live' or 'demo'
   // if you want data to be loaded from the static demo js file (self.data here) - use 'demo' mode
