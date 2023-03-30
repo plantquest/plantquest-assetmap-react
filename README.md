@@ -434,7 +434,7 @@ PQAM.listen((msg) => {
     <i>&lt;OBJECT&gt;</i>: Metadata of the SHOWN asset <br>
   </p>
 
-  <h3>USER LIST ASSETS|ROOM|BUILDING</h3>
+  <h3>USER LIST ASSET|ROOM|BUILDING</h3>
   <pre>
 {
   srv: 'plantquest',
@@ -446,7 +446,21 @@ PQAM.listen((msg) => {
   <span>Allows the user to list all the assets there are on the map.</span><br>
     <i>&lt;ARRAY&gt;</i>: List of all the assets <br>
   </p>
-  
+
+<h3>USER LOAD ASSET|ROOM|BUILDING</h3>
+  <pre>
+{
+  srv: 'plantquest',
+  part: 'assetmap',
+  load: 'asset|room|building',
+  asset: &lt;OBJECT&gt;,
+}</pre>
+  <p>Where:<br>
+  <span>Allows the user to load a single <code>asset|room|building</code> by id</span><br>
+ <i>&lt;OBJECT&gt;</i>: the metadata of the loaded <code>asset|room|building</code> <br>
+  </p> 
+{srv: 'plantquest', part: 'assetmap', load: 'asset', asset: Entity}
+
 ## Licenses
 
 [MIT](LICENSE) © [Plantquest Ltd](https://plantquest.com)
