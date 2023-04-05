@@ -19,7 +19,7 @@ npm install --save @plantquest/assetmap-react
 
 Set `window.PLANTQUEST_ASSETMAP_LOG` to `true` to enable logging.
 
-Set `window.PLANTQUEST_ASSETMAP_DEBUG.show_coords` to `true` to display a small box where asset info is shown.
+Set `window.PLANTQUEST_ASSETMAP_DEBUG.show_coords` to `true` to display a small box where asset info is shown, and xco, yco of cursor when clicked on the map.
 
 
 ## Options
@@ -50,7 +50,7 @@ import { PlantQuestAssetMap } from '@plantquest/assetmap-react'
 
 // enable logging - useful for debugging purposes
 window.PLANTQUEST_ASSETMAP_LOG = true
-// enable small info box for the current asset info shown - such as xco, yco, etc.
+// enable small info box for the current asset info shown, or for the position of your mouse on the map - such as xco, yco, etc.
 window.PLANTQUEST_ASSETMAP_DEBUG.show_coords = true
 
 const options = {
