@@ -15,7 +15,11 @@ class PlantQuestAssetMap extends React.Component {
   componentDidMount() {
     console.log('PQ DIDM')
     
+    window.PlantQuestAssetMap.loc.map = -1
+    window.PlantQuestAssetMap.current.started = false
     window.PlantQuestAssetMap.start(this.props.options)
+    
+    // window.PlantQuestAssetMap.start(this.props.options)
   
     window.PlantQuestAssetMap.listen((msg)=>{
       if('asset' === msg.show && msg.before) {
@@ -25,8 +29,12 @@ class PlantQuestAssetMap extends React.Component {
   }
 
   render() {
+
+    
+    
     console.log('PQ RENDER')
     let AIC = this.props.assetinfo
+
   
     return (
       <div>
