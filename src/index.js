@@ -37,7 +37,7 @@ class PlantQuestAssetMap extends React.Component {
 
   
     return (
-      <div>
+      <div style={{height: '100%', width: '100%'}}>
         <div id="plantquest-assetmap-assetinfo">
           { this.state.asset ? <AIC asset={this.state.asset}/> : <div></div> }
         </div>
