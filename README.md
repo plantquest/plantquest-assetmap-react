@@ -415,7 +415,7 @@ PQAM.listen((msg) => {
   <span>display a list of assets by id</span><br>
  <i>&lt;STRING&gt;</i>: STATE is generally user-specified - for example it can be 'up'|'down'|'alarm'|'missing'
  
- <i>&lt;ARRAY&gt;</i>: IDs <code>(UUIDv4 format)</code> of the <code>assets</code> to be shown on the map using clustering
+ <i>&lt;ARRAY&gt;</i>: IDs <code>(UUIDv4 format)</code> of the <code>assets</code> to be shown on the map using clustering - note: if this is set to <code>null</code>, all assets will be rendered and displayed
   </p>
   
   
