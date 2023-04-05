@@ -402,7 +402,22 @@ PQAM.listen((msg) => {
 })
    
 ```
-
+<h3>SHOW LIST OF ASSETS ON THE MAP</h3>
+  <pre>
+{
+  srv: 'plantquest',
+  part: 'assetmap',
+  show: 'asset',
+  state: &lt;STRING&gt;,
+  asset: &lt;ARRAY&gt;,
+}</pre>
+ <p>Where:<br>
+  <span>display a list of assets by id</span><br>
+ <i>&lt;STRING&gt;</i>: STATE is generally user-specified - for example it can be 'up'|'down'|'alarm'|'missing'
+ <i>&lt;ARRAY&gt;</i>: IDs <code>(UUIDv4 format)</code> of the <code>assets</code> to be shown on the map using clustering
+  </p>
+  
+  
   <h2>LISTEN MESSAGES</h2>
    
   <h3>STATE</h3>
