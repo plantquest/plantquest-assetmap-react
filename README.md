@@ -19,6 +19,8 @@ npm install --save @plantquest/assetmap-react
 
 Set `window.PLANTQUEST_ASSETMAP_LOG` to `true` to enable logging.
 
+Set `window.PLANTQUEST_ASSETMAP_DEBUG.show_coords` to `true` to display a small box where asset info is shown, and xco-yco of cursor when clicked on the map.
+
 
 ## Options
 
@@ -35,6 +37,10 @@ Set `window.PLANTQUEST_ASSETMAP_LOG` to `true` to enable logging.
 * `start.map`: Starting map ( default: `0` )
 * `start.level`: Starting level ( default: `0` )
 * `room.color`: Room highlight color ( default: `'#33f'` )
+* `mode`: MAP MODE can either can `'live'` or `'demo'` - check out the code example below for details
+* `plant_id`: your plant ID
+* `project_id`: your project ID
+* `stage`: your stage
 
 ## ReactJS: Quick Example
 
@@ -44,6 +50,8 @@ import { PlantQuestAssetMap } from '@plantquest/assetmap-react'
 
 // enable logging - useful for debugging purposes
 window.PLANTQUEST_ASSETMAP_LOG = true
+// enable small info box for the current asset info shown, or for the position of your mouse on the map - such as xco, yco, etc.
+window.PLANTQUEST_ASSETMAP_DEBUG.show_coords = true
 
 const options = {
   data: 'https://demo.plantquest.app/sample-data.js',
@@ -62,6 +70,17 @@ const options = {
     // "name" - name of the state
     // "marker" - type of marker ( 'standard' | 'alert' ) 
   },
+  
+  endpoint: ENDPOINT, // your endpoint: 'https://*'
+
+  // mode can either can 'live' or 'demo'
+  // if you want data to be loaded from the static demo js file (self.data here) - use 'demo' mode
+  // if you want 'live' data from the endpoint - use 'live' mode
+  mode: 'live',
+
+  plant_id: '', // your plant_id
+  project_id: '', // your project_id
+  stage: '', // your stage
   
   // room highlight color
   room: {
@@ -301,6 +320,103 @@ class App extends React.Component {
   <span>This indicates what map to show. Maps are numbered 1 to n. For example, "Map 1" may be "First Floor Map", "Map 2" may be "Second Floor Map" etc.</span><br>
     <i>&lt;INTEGER&gt;</i>: Number of the map<br>
   </p>
+ 
+   <h3>LIST ASSET|ROOM|BUILDING</h3>
+  <pre>
+{
+  srv: 'plantquest',
+  part: 'assetmap',
+  list: 'asset|room|building', 
+}</pre>
+
+```js
+// for example - take assets
+const PQAM = window.PlantQuestAssetMap
+// our listener
+PQAM.listen((msg) => {
+  if('asset' === msg.list) {
+    // use msg.assets
+    // where msg.assets is a list of all assets on the map
+  }
+})
+
+PQAM.send({
+  'srv': 'plantquest',
+  'part': 'assetmap',
+  'list': 'asset'
+})
+
+// the syntax is flexiable enough for us to just write:
+
+PQAM.send('srv:plantquest,part:assetmap,list:asset') 
+
+```
+
+<h3>LOAD ASSET|ROOM|BUILDING</h3>
+  <pre>
+{
+  srv: 'plantquest',
+  part: 'assetmap',
+  load: 'asset|room|building', 
+  id: &lt;STRING&gt;,
+}</pre>
+ <p>Where:<br>
+  <span>Load a single <code>asset|room|building</code> by id</span><br>
+ <i>&lt;STRING&gt;</i>: ID <code>(UUIDv4 format)</code> of the <code>asset|room|building</code> to be loaded
+  </p>
+
+<h3>SAVE ASSET|ROOM|BUILDING</h3>
+  <pre>
+{
+  srv: 'plantquest',
+  part: 'assetmap',
+  save: 'asset|room|building', 
+  asset|room|building: &lt;OBJECT&gt;,
+}</pre>
+ <p>Where:<br>
+  <span>Save a new <code>asset|room|building</code> with your own metadata</span><br>
+    <i>&lt;OBJECT&gt;</i>: Metadata of your <code>asset|room|building</code> to be saved
+  </p>
+
+```js
+// for example
+const PQAM = window.PlantQuestAssetMap
+    
+PQAM.send({
+  srv: 'plantquest',
+  part: 'assetmap',
+  save: 'asset',
+  asset: {
+    id: 'e565b059-8633-460a-8171-903d38720c26',
+    tag: 'asset001',
+    xco: 10,
+    yco: 10,
+  },
+})
+    
+PQAM.listen((msg) => {
+  if('asset' === msg.save) {
+    // use msg.asset
+    // where msg.asset is the newly saved asset
+  }
+})
+   
+```
+<h3>SHOW LIST OF ASSETS ON THE MAP</h3>
+  <pre>
+{
+  srv: 'plantquest',
+  part: 'assetmap',
+  show: 'asset',
+  state: &lt;STRING&gt;,
+  asset: &lt;ARRAY&gt;,
+}</pre>
+ <p>Where:<br>
+  <span>display a list of assets by id</span><br>
+ <i>&lt;STRING&gt;</i>: STATE is generally user-specified - for example it can be 'up'|'down'|'alarm'|'missing'
+ 
+ <i>&lt;ARRAY&gt;</i>: IDs <code>(UUIDv4 format)</code> of the <code>assets</code> to be shown on the map using clustering - note: if this is set to <code>null</code>, all assets will be rendered and displayed
+  </p>
   
   
   <h2>LISTEN MESSAGES</h2>
@@ -387,6 +503,45 @@ PQAM.listen((msg) => {
     <i>&lt;OBJECT&gt;</i>: Metadata of the SHOWN asset <br>
   </p>
 
+  <h3>USER LIST ASSET|ROOM|BUILDING</h3>
+  <pre>
+{
+  srv: 'plantquest',
+  part: 'assetmap',
+  list: 'asset|room|building',
+  assets|rooms|buildings: &lt;ARRAY&gt;,
+}</pre>
+  <p>Where:<br>
+ <span>Allows the user to list all the <code>assets|rooms|buildings</code> there are on the map.</span><br>
+ <i>&lt;ARRAY&gt;</i>: List of all the <code>assets|rooms|buildings</code> <br>
+  </p>
+
+<h3>USER LOAD ASSET|ROOM|BUILDING</h3>
+  <pre>
+{
+  srv: 'plantquest',
+  part: 'assetmap',
+  load: 'asset|room|building',
+  asset: &lt;OBJECT&gt;,
+}</pre>
+  <p>Where:<br>
+  <span>Allows the user to load a single <code>asset|room|building</code> by id</span><br>
+ <i>&lt;OBJECT&gt;</i>: the metadata of the loaded <code>asset|room|building</code> <br>
+  </p>
+
+<h3>USER SAVE ASSET|ROOM|BUILDING</h3>
+  <pre>
+{
+  srv: 'plantquest',
+  part: 'assetmap',
+  save: 'asset|room|building',
+  asset|room|building: &lt;OBJECT&gt;,
+}</pre>
+  <p>Where:<br>
+  <span>Allows the user to save a new <code>asset|room|building</code> with their own metadata </span><br>
+ <i>&lt;OBJECT&gt;</i>: the metadata of the newly saved <code>asset|room|building</code> <br>
+  </p>
+  
 ## Licenses
 
 [MIT](LICENSE) © [Plantquest Ltd](https://plantquest.com)
