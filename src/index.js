@@ -3,6 +3,8 @@ import styles from './styles.module.css'
 
 import '@plantquest/assetmap'
 
+import Pkg from '../package.json'
+
 
 class PlantQuestAssetMap extends React.Component {
   constructor(props) {
@@ -13,13 +15,17 @@ class PlantQuestAssetMap extends React.Component {
   }
 
   componentDidMount() {
-    console.log('PQ DIDM')
+    const reactInfo = {
+      name: '@plantquest/assetmap-react',
+      version: Pkg.version,
+    }
+    
+    window.PlantQuestAssetMap.log('INFO', reactInfo, window.PlantQuestAssetMap.info)
+    window.PlantQuestAssetMap.info.react = reactInfo
     
     window.PlantQuestAssetMap.loc.map = -1
     window.PlantQuestAssetMap.current.started = false
     window.PlantQuestAssetMap.start(this.props.options)
-    
-    // window.PlantQuestAssetMap.start(this.props.options)
   
     window.PlantQuestAssetMap.listen((msg)=>{
       if('asset' === msg.show && msg.before) {
@@ -29,12 +35,7 @@ class PlantQuestAssetMap extends React.Component {
   }
 
   render() {
-
-    
-    
-    console.log('PQ RENDER')
     let AIC = this.props.assetinfo
-
   
     return (
       <div style={{height: '100%', width: '100%'}}>
