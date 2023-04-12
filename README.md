@@ -79,17 +79,17 @@ const options = {
   },
   
   endpoint: ENDPOINT, // your endpoint: 'https://*'
-  apikey: '', // your api key
-  tilesEndPoint: '', // map tiles endpoint
+  apikey: '<STRING>', // your api key
+  tilesEndPoint: '<STRING>', // map tiles endpoint
 
   // mode can either can 'live' or 'demo'
   // if you want data to be loaded from the static demo js file (self.data here) - use 'demo' mode
   // if you want 'live' data from the endpoint - use 'live' mode
   mode: 'live',
 
-  plant_id: '', // your plant_id
-  project_id: '', // your project_id
-  stage: '', // your stage
+  plant_id: '<STRING>', // your plant_id
+  project_id: '<STRING>', // your project_id
+  stage: '<STRING>', // your stage
   
   // room highlight color
   room: {
