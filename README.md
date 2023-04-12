@@ -59,7 +59,7 @@ const options = {
   width: '100%',
   height: '100%',
   // this will enable dynamic resizing of the map widget
-  // it will adjust to your node
+  // it will adjust to your node ( 100% will take up 100% of your parent node, etc. )
   // but then the parent node of the component has to have width and height defined
   // like in the example below
   
