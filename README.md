@@ -26,6 +26,7 @@ Set `window.PLANTQUEST_ASSETMAP_DEBUG.show_coords` to `true` to display a small 
 
 * `width`: Pixel width of map ( default: `'600px'` )
 * `height`: Pixel height of map ( default: `'400px'` )
+* `mapImg`: map dimensions - very important for your polygons to fit the map 
 * `mapBounds`: Pixel bounds of map
 * `mapStart`: Pixel start position of map ( e.g `[y, x]` ( default: `[2925, 3900]` ) )
 * `mapStartZoom`: Starting zoom level
@@ -64,6 +65,8 @@ const options = {
   // it will adjust to your node ( 100% will take 100% of your parent node, etc. )
   // but then the parent node of the component has to have its own width and height
   // like in the example below
+  
+  mapImg: [6140, 4602], // important: set the map [width, height]
   
   states: {
     up: { color: '#696', name: 'Up', marker: 'standard' },
