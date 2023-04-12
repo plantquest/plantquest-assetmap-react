@@ -57,7 +57,7 @@ window.PLANTQUEST_ASSETMAP_LOG = true
 window.PLANTQUEST_ASSETMAP_DEBUG.show_coords = true
 
 const options = {
-  data: 'https://demo.plantquest.app/sample-data.js',
+  data: 'https://demo.plantquest.app/sample-data.js', // not needed if using: `mode: 'live'`
 
   width: '100%',
   height: '100%',
