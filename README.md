@@ -26,7 +26,7 @@ Set `window.PLANTQUEST_ASSETMAP_DEBUG.show_coords` to `true` to display a small 
 
 * `width`: Pixel width of map ( default: `'600px'` )
 * `height`: Pixel height of map ( default: `'400px'` )
-* `mapImg`: map dimensions - very important for your polygons to fit the map 
+* `mapImg`: map dimensions - very important for the polygons to fit the map 
 * `mapBounds`: Pixel bounds of map
 * `mapStart`: Pixel start position of map ( e.g `[y, x]` ( default: `[2925, 3900]` ) )
 * `mapStartZoom`: Starting zoom level
