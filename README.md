@@ -108,7 +108,7 @@ class AssetInfo extends React.Component {
   
   render() {
     return <div>
-         <h3>{this.props.asset.id}</h3>
+         <h3>{this.props.asset.tag}</h3>
          <p><i>Building:</i> {this.props.asset.building}</p>
        </div>
   }
