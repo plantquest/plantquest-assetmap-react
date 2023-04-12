@@ -55,12 +55,14 @@ window.PLANTQUEST_ASSETMAP_DEBUG.show_coords = true
 
 const options = {
   data: 'https://demo.plantquest.app/sample-data.js',
-  map: [
-    'https://demo.plantquest.app/pqd-pq01-m01-011.png',
-    'https://demo.plantquest.app/pqd-pq01-m02-011.png',
-  ],
-  width: '1000px',
-  height: '1000px',
+
+  width: '100%',
+  height: '100%',
+  // this will enable dynamic resizing of the map widget
+  // it will adjust to your node
+  // but then the parent node of the component has to have width and height defined
+  // like in the example below
+  
   states: {
     up: { color: '#696', name: 'Up', marker: 'standard' },
     down: { color: '#666', name: 'Down', marker: 'standard' },
@@ -210,10 +212,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <PlantQuestAssetMap
-          options={options}
-          assetinfo={AssetInfo}
-        />
+        <div style={{width: '150vh', height: '100vh' }}>
+          <PlantQuestAssetMap
+            options={options}
+            assetinfo={AssetInfo}
+          />
+        </div>
       </div>
     )
   }
