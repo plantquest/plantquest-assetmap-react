@@ -38,6 +38,8 @@ Set `window.PLANTQUEST_ASSETMAP_DEBUG.show_coords` to `true` to display a small 
 * `start.level`: Starting level ( default: `0` )
 * `room.color`: Room highlight color ( default: `'#33f'` )
 * `mode`: MAP MODE can either can `'live'` or `'demo'` - check out the code example below for details
+* `apikey`: your project api key
+* `tilesEndPoint`: endpoint to your maps ( note that use tilesets so we don't specify maps explicitly )
 * `plant_id`: your plant ID
 * `project_id`: your project ID
 * `stage`: your stage
@@ -75,6 +77,7 @@ const options = {
   
   endpoint: ENDPOINT, // your endpoint: 'https://*'
   apikey: '', // your api key
+  tilesEndPoint: '', // map tiles endpoint
 
   // mode can either can 'live' or 'demo'
   // if you want data to be loaded from the static demo js file (self.data here) - use 'demo' mode
