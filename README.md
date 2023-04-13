@@ -396,7 +396,7 @@ PQAM.send('srv:plantquest,part:assetmap,list:asset')
   part: 'assetmap',
   remove: 'asset|room|building',
   id: &lt;STRING&gt;,
-  }</pre>
+}</pre>
  <p>Where:<br>
   <span>remove <code>asset|room|building</code> by id</span><br>
  <i>&lt;STRING&gt;</i>: ID <code>(UUIDv4 format)</code> of the <code>asset|room|building</code>
