@@ -566,6 +566,20 @@ PQAM.listen((msg) => {
  <i>&lt;OBJECT&gt;</i>: the metadata of the newly saved <code>asset|room|building</code> <br>
   </p>
   
+<h3>USER REMOVE ASSET|ROOM|BUILDING</h3>
+  <pre>
+  {
+    srv:'plantquest',
+    part:'assetmap',
+    remove:'asset|room|building',
+    asset|room|building: &lt;ID&gt;,
+  }</pre>
+  <p>Where:<br>
+  <span>Allows the user to see when an item is removed </span><br>
+ <i>&lt;ID&gt;</i>: the id of the removed <code>asset|room|building</code> <br>
+  </p> 
+
+  
 ## Licenses
 
 [MIT](LICENSE) © [Plantquest Ltd](https://plantquest.com)
