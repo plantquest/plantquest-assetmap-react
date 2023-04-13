@@ -388,6 +388,21 @@ PQAM.send('srv:plantquest,part:assetmap,list:asset')
   <span>Save a new <code>asset|room|building</code> with your own metadata</span><br>
     <i>&lt;OBJECT&gt;</i>: Metadata of your <code>asset|room|building</code> to be saved
   </p>
+  
+<h3>REMOVE ASSET|ROOM|BUILDING</h3>
+  <pre>
+{
+  srv: 'plantquest',
+  part: 'assetmap',
+  remove: 'asset|room|building',
+  id: &lt;STRING&gt;,
+  }</pre>
+ <p>Where:<br>
+  <span>remove <code>asset|room|building</code> by id</span><br>
+ <i>&lt;STRING&gt;</i>: ID <code>(UUIDv4 format)</code> of the <code>asset|room|building</code>
+  </p>
+
+    
 
 ```js
 // for example
