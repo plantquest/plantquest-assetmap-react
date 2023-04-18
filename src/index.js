@@ -10,7 +10,8 @@ class PlantQuestAssetMap extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      asset: null
+      asset: null,
+      assets: null,
     }
   }
 
@@ -28,9 +29,15 @@ class PlantQuestAssetMap extends React.Component {
     window.PlantQuestAssetMap.start(this.props.options)
   
     window.PlantQuestAssetMap.listen((msg)=>{
+      // console.log(msg)
       if('asset' === msg.show && msg.before) {
         setTimeout(()=>{
           this.setState({asset:msg.asset})
+        }, 11)
+      }
+      else if('clusterclick' === msg.event) {
+        setTimeout(()=>{
+          this.setState({assets:msg.assetlist})
         }, 11)
       }
     })
@@ -38,11 +45,15 @@ class PlantQuestAssetMap extends React.Component {
 
   render() {
     let AIC = this.props.assetinfo
+    let ACC = this.props.assetcluster
   
     return (
       <div style={{height: '100%', width: '100%'}}>
         <div id="plantquest-assetmap-assetinfo">
-          { this.state.asset ? <AIC asset={this.state.asset}/> : <div></div> }
+          { this.state.asset && AIC ? <AIC asset={this.state.asset}/> : <div></div> }
+        </div>
+        <div id="plantquest-assetmap-assetcluster">
+          { this.state.assets && ACC ? <ACC assets={this.state.assets}/> : <div></div> }
         </div>
         <div id="plantquest-assetmap"></div>
       </div>
