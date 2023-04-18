@@ -1,6 +1,6 @@
 {
   "name": "@plantquest/assetmap-react",
-  "version": "1.5.2",
+  "version": "1.6.0",
   "description": "PlantQuest Asset Map",
   "author": "plantquest",
   "license": "MIT",
@@ -57,6 +57,6 @@
     "*.ts"
   ],
   "dependencies": {
-    "@plantquest/assetmap": "2.0.2"
+    "@plantquest/assetmap": "2.1.0"
   }
 }
