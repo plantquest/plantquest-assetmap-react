@@ -8,7 +8,7 @@ module.exports = {
     lib: {
       entry: 'src/index.jsx',
       name: 'PlantQuestAssetMap',
-      fileName: 'pqam-react',
+      fileName: (format) => `pqam-react.${format}.js`,
       formats: ['es', 'umd'],
     },
     emptyOutDir: false,

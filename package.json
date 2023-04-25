@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": "plantquest/plantquest-assetmap-react",
   "main": "dist/pqam-react.umd.js",
-  "module": "dist/pqam-react.mjs",
+  "module": "dist/pqam-react.es.js",
   "source": "src/index.jsx",
   "types": "plantquest-assetmap.d.ts",
   "scripts": {
