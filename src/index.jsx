@@ -30,7 +30,7 @@ class PlantQuestAssetMap extends React.Component {
   
     window.PlantQuestAssetMap.listen((msg)=>{
       // console.log(msg)
-      if('asset' === msg.show && msg.before) {
+      if('asset' === msg.show) { // && msg.before) {
         setTimeout(()=>{
           this.setState({asset:msg.asset})
         }, 11)
