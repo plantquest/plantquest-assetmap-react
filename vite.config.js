@@ -3,7 +3,7 @@ const react = require('@vitejs/plugin-react')
 module.exports = {
   plugins: [react()],
   build: {
-    // minify: false,
+    minify: false,
     target: 'es6',
     lib: {
       entry: 'src/index.jsx',
