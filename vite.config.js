@@ -13,6 +13,7 @@ module.exports = {
     },
     emptyOutDir: false,
     rollupOptions: {
+      treeshake: false,
       external: ['react', 'react-dom'],
       output: {
         globals: {
