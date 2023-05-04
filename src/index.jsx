@@ -26,8 +26,10 @@ class PlantQuestAssetMap extends React.Component {
     
     window.PlantQuestAssetMap.loc.map = -1
     window.PlantQuestAssetMap.current.started = false
+
     window.PlantQuestAssetMap.start(this.props.options)
-  
+
+    
     window.PlantQuestAssetMap.listen((msg)=>{
       // console.log(msg)
       if('asset' === msg.show) { // && msg.before) {
