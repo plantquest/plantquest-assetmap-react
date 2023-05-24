@@ -27,11 +27,10 @@ class PlantQuestAssetMap extends React.Component {
     window.PlantQuestAssetMap.loc.map = -1
     window.PlantQuestAssetMap.current.started = false
 
-    window.PlantQuestAssetMap.start(this.props.options)
+    window.PlantQuestAssetMap.start(this.props.options, this.props.ready)
 
-    
-    window.PlantQuestAssetMap.listen((msg)=>{
-      // console.log(msg)
+
+    let __pq_info_props__ = (msg) => {
       if('asset' === msg.show) { // && msg.before) {
         setTimeout(()=>{
           this.setState({asset:msg.asset})
@@ -42,7 +41,12 @@ class PlantQuestAssetMap extends React.Component {
           this.setState({assets:msg.assetlist})
         }, 11)
       }
-    })
+    }
+    __pq_info_props__.__pq_info_props__ = true
+    
+    if(null == window.PlantQuestAssetMap.listeners.find(f=>f.__pq_info_props__)) {
+      window.PlantQuestAssetMap.listen(__pq_info_props__)
+    }
   }
 
   render() {
