@@ -6,7 +6,7 @@ import '@plantquest/assetmap'
 import Pkg from '../package.json'
 
 
-class PlantQuestAssetMap extends React.Component {
+class PlantQuestAssetMini extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -21,13 +21,13 @@ class PlantQuestAssetMap extends React.Component {
       version: Pkg.version,
     }
     
-    window.PlantQuestAssetMap.log('INFO', reactInfo, window.PlantQuestAssetMap.info)
-    window.PlantQuestAssetMap.info.react = reactInfo
+    window.PlantQuestAssetMini.log('INFO', reactInfo, window.PlantQuestAssetMini.info)
+    window.PlantQuestAssetMini.info.react = reactInfo
     
-    window.PlantQuestAssetMap.loc.map = -1
-    window.PlantQuestAssetMap.current.started = false
+    window.PlantQuestAssetMini.loc.map = -1
+    window.PlantQuestAssetMini.current.started = false
 
-    window.PlantQuestAssetMap.start(this.props.options, this.props.ready)
+    window.PlantQuestAssetMini.start(this.props.options, this.props.ready)
 
 
     let __pq_info_props__ = (msg) => {
@@ -44,8 +44,8 @@ class PlantQuestAssetMap extends React.Component {
     }
     __pq_info_props__.__pq_info_props__ = true
     
-    if(null == window.PlantQuestAssetMap.listeners.find(f=>f.__pq_info_props__)) {
-      window.PlantQuestAssetMap.listen(__pq_info_props__)
+    if(null == window.PlantQuestAssetMini.listeners.find(f=>f.__pq_info_props__)) {
+      window.PlantQuestAssetMini.listen(__pq_info_props__)
     }
   }
 
@@ -68,7 +68,7 @@ class PlantQuestAssetMap extends React.Component {
 }
 
 export {
-  PlantQuestAssetMap
+  PlantQuestAssetMini
 }
 
 

@@ -7,7 +7,7 @@ module.exports = {
     target: 'es6',
     lib: {
       entry: 'src/index.jsx',
-      name: 'PlantQuestAssetMap',
+      name: 'PlantQuestAssetMini',
       fileName: 'pqam-react',
       formats: ['es', 'umd'],
     },
