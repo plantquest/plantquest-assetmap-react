@@ -59,11 +59,16 @@ function PlantQuestAssetMap(props) {
     let pqam = window.PlantQuestAssetMap.make(id)
 
     pqam.listen('__plantquest_react_info__', (msg) => {
-      if('asset' === msg.show) { 
-        setAsset(msg.asset)
+      if(
+        'asset' === msg.show &&
+          null != msg.asset &&
+          'object' === typeof msg.asset
+      )
+      { 
+        setAsset({...msg.asset})
       }
-      else if('clusterclick' === msg.event) {
-        setAssets(msg.assets)
+      else if('clusterclick' === msg.event && Array.isArray(msg.asset)) {
+        setAssets(msg.assets.concat([]))
       }
     })
 
