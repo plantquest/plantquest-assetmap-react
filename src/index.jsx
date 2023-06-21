@@ -67,8 +67,8 @@ function PlantQuestAssetMap(props) {
       { 
         setAsset({...msg.asset})
       }
-      else if('clusterclick' === msg.event && Array.isArray(msg.asset)) {
-        setAssets(msg.asset)
+      else if('clusterclick' === msg.event && Array.isArray(msg.assets)) {
+        setAssets(msg.assets)
       }
     })
 
