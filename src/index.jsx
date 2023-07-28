@@ -15,7 +15,7 @@ function PlantQuestAssetMap(props) {
     assetinfo,
     assetcluster,
   } = props
-  
+
   const [asset, setAsset] = useState(null)
   const [assets, setAssets] = useState(null)
   const [assetinfoContainer, setAssetinfoContainer] = useState(null)
@@ -79,6 +79,9 @@ function PlantQuestAssetMap(props) {
   let AIC = assetinfo
   let ACC = assetcluster
 
+  let pqam = window.PlantQuestAssetMap.make(id)
+  let send = pqam.send.bind(pqam)
+  
   return (
     <div
       data-plantquest-map-id={props.id}
@@ -88,11 +91,11 @@ function PlantQuestAssetMap(props) {
       <div id="plantquest-assetmap"></div>
 
       { assetinfoContainer &&
-        createPortal(<AIC asset={asset} />, assetinfoContainer)
+        createPortal(<AIC asset={asset} send={send} />, assetinfoContainer)
       }
 
       { clusterinfoContainer &&
-        createPortal(<ACC assets={assets} />, clusterinfoContainer)
+        createPortal(<ACC assets={assets} send={send} />, clusterinfoContainer)
       }
 
      </div>
