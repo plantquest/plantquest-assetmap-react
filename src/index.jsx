@@ -15,7 +15,7 @@ function PlantQuestAssetMap(props) {
     assetinfo,
     assetcluster,
   } = props
-  
+
   const [asset, setAsset] = useState(null)
   const [assets, setAssets] = useState(null)
   const [assetinfoContainer, setAssetinfoContainer] = useState(null)
@@ -59,10 +59,15 @@ function PlantQuestAssetMap(props) {
     let pqam = window.PlantQuestAssetMap.make(id)
 
     pqam.listen('__plantquest_react_info__', (msg) => {
-      if('asset' === msg.show) { 
-        setAsset(msg.asset)
+      if(
+        'asset' === msg.show &&
+          null != msg.asset &&
+          'object' === typeof msg.asset
+      )
+      { 
+        setAsset({...msg.asset})
       }
-      else if('clusterclick' === msg.event) {
+      else if('clusterclick' === msg.event && Array.isArray(msg.assets)) {
         setAssets(msg.assets)
       }
     })
@@ -74,6 +79,9 @@ function PlantQuestAssetMap(props) {
   let AIC = assetinfo
   let ACC = assetcluster
 
+  let pqam = window.PlantQuestAssetMap.make(id)
+  let send = pqam.send.bind(pqam)
+  
   return (
     <div
       data-plantquest-map-id={props.id}
@@ -83,11 +91,11 @@ function PlantQuestAssetMap(props) {
       <div id="plantquest-assetmap"></div>
 
       { assetinfoContainer &&
-        createPortal(<AIC asset={asset} />, assetinfoContainer)
+        createPortal(<AIC asset={asset} send={send} />, assetinfoContainer)
       }
 
       { clusterinfoContainer &&
-        createPortal(<ACC assets={assets} />, clusterinfoContainer)
+        createPortal(<ACC assets={assets} send={send} />, clusterinfoContainer)
       }
 
      </div>
