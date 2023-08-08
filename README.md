@@ -26,7 +26,7 @@ Set `window.PLANTQUEST_ASSETMAP_DEBUG.show_coords` to `true` to display a small 
 
 * `width`: Pixel width of map ( default: `'600px'` )
 * `height`: Pixel height of map ( default: `'400px'` )
-* `mapImg`: map dimensions - very important for the polygons to fit the map 
+* `mapImg`: Map dimensions - very important for the polygons to fit the map 
 * `mapBounds`: Pixel bounds of map
 * `mapStart`: Pixel start position of map ( e.g `[y, x]` ( default: `[2925, 3900]` ) )
 * `mapStartZoom`: Starting zoom level
@@ -39,11 +39,11 @@ Set `window.PLANTQUEST_ASSETMAP_DEBUG.show_coords` to `true` to display a small 
 * `start.level`: Starting level ( default: `0` )
 * `room.color`: Room highlight color ( default: `'#33f'` )
 * `mode`: MAP MODE can either can `'live'` or `'demo'` - check out the code example below for details
-* `apikey`: your project api key
-* `tilesEndPoint`: endpoint to your maps ( note that use tilesets so we don't specify maps explicitly )
-* `plant_id`: your plant ID
-* `project_id`: your project ID
-* `stage`: your stage
+* `apikey`: Your project api key
+* `tilesEndPoint`: Endpoint to your maps ( note that use tilesets so we don't specify maps explicitly )
+* `plant_id`: Your plant ID
+* `project_id`: Your project ID
+* `stage`: Your stage
 
 ## ReactJS: Quick Example
 
