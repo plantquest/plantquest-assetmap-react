@@ -23,11 +23,11 @@
     "repo-publish-quick": "npm run build && npm run repo-tag && npm publish --access public --registry https://registry.npmjs.org "
   },
   "devDependencies": {
-    "@plantquest/assetmap": "5.0.1",
-    "@vitejs/plugin-react": "^4.0.3",
+    "@plantquest/assetmap": "6.0.0",
+    "@vitejs/plugin-react": "^4.0.4",
     "react": "18",
     "react-dom": "18",
-    "vite": "^4.4.7"
+    "vite": "^4.4.9"
   },
   "files": [
     "LICENSE",
