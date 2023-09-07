@@ -1,6 +1,6 @@
 {
   "name": "@plantquest/assetmap-react",
-  "version": "4.0.3",
+  "version": "5.0.0",
   "description": "PlantQuest Asset Map",
   "author": "plantquest",
   "license": "MIT",
@@ -23,7 +23,7 @@
     "repo-publish-quick": "npm run build && npm run repo-tag && npm publish --access public --registry https://registry.npmjs.org "
   },
   "devDependencies": {
-    "@plantquest/assetmap": "6.0.0",
+    "@plantquest/assetmap": "6.1.0",
     "@vitejs/plugin-react": "^4.0.4",
     "react": "18",
     "react-dom": "18",
