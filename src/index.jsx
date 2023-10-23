@@ -7,6 +7,9 @@ import '@plantquest/assetmap'
 import Pkg from '../package.json'
 
 
+
+// console.log('PQAM REACT 01')
+
 function PlantQuestAssetMap(props) {
   const {
     id,
