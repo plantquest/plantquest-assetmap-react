@@ -1,6 +1,6 @@
 {
   "name": "@plantquest/assetmap-react",
-  "version": "6.0.1",
+  "version": "6.0.2",
   "description": "PlantQuest Asset Map",
   "author": "plantquest",
   "license": "MIT",
@@ -9,7 +9,13 @@
   "module": "dist/pqam-react.mjs",
   "source": "src/index.jsx",
   "types": "plantquest-assetmap.d.ts",
-  "scripts": {
+   "exports": {
+    ".": {
+      "import": "./dist/pqam-react.mjs",
+      "require": "./dist/pqam-react.umd.js"
+    }
+  },
+ "scripts": {
     "dev": "vite",
     "build": "vite build",
     "watch": "vite build -w",
